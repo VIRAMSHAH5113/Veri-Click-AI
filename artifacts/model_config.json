@@ -1,0 +1,18 @@
+{
+  "model_name": "Veri-Click compact multimodal BiGRU-CNN gated fusion",
+  "vocab_size": 1054,
+  "max_tokens": 40,
+  "image_size": 96,
+  "feature_dim": 16,
+  "seed": 42,
+  "best_epoch": 3,
+  "train_rows": 204,
+  "validation_rows": 44,
+  "test_rows": 44,
+  "dataset_csv": "C:\\Users\\DARSHIT\\OneDrive\\Desktop\\dl_clickbait_4\\Veri-Click-AI\\data\\Final_data.csv",
+  "image_root": "C:\\Users\\DARSHIT\\OneDrive\\Desktop\\dl_clickbait_4\\Veri-Click-AI\\data",
+  "training_device": "cpu",
+  "model_comparison": true,
+  "elapsed_seconds": 422.7,
+  "note": "Compact alternative architecture; these dataset-specific results do not reproduce the supplied paper's RoBERTa/ResNet50 stacked-ensemble benchmark."
+}

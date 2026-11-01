@@ -1,0 +1,2 @@
+# Required optional dependency for public YouTube caption retrieval in Title Promise.
+youtube-transcript-api>=1.2,<2

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Veri-Click AI — YouTube Companion",
+  "version": "1.0.0",
+  "description": "Adds local clickbait-risk screening badges to visible YouTube video cards.",
+  "permissions": [],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://i.ytimg.com/*",
+    "https://*.ytimg.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Veri-Click AI — scan visible YouTube cards"
+  }
+}

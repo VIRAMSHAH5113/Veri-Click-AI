@@ -1,0 +1,90 @@
+{
+  "config": {
+    "model_name": "Veri-Click compact multimodal BiGRU-CNN gated fusion",
+    "vocab_size": 1054,
+    "max_tokens": 40,
+    "image_size": 96,
+    "feature_dim": 16,
+    "seed": 42,
+    "best_epoch": 3,
+    "train_rows": 204,
+    "validation_rows": 44,
+    "test_rows": 44,
+    "dataset_csv": "C:\\Users\\DARSHIT\\OneDrive\\Desktop\\dl_clickbait_4\\Veri-Click-AI\\data\\Final_data.csv",
+    "image_root": "C:\\Users\\DARSHIT\\OneDrive\\Desktop\\dl_clickbait_4\\Veri-Click-AI\\data",
+    "training_device": "cpu",
+    "model_comparison": true,
+    "elapsed_seconds": 422.7,
+    "note": "Compact alternative architecture; these dataset-specific results do not reproduce the supplied paper's RoBERTa/ResNet50 stacked-ensemble benchmark."
+  },
+  "test": {
+    "accuracy": 0.6591,
+    "precision": 0.5758,
+    "recall": 0.95,
+    "f1": 0.717,
+    "roc_auc": 0.8625,
+    "confusion_matrix": [
+      [
+        10,
+        14
+      ],
+      [
+        1,
+        19
+      ]
+    ],
+    "classification_report": {
+      "non_clickbait": {
+        "precision": 0.9090909090909091,
+        "recall": 0.4166666666666667,
+        "f1-score": 0.5714285714285714,
+        "support": 24.0
+      },
+      "clickbait": {
+        "precision": 0.5757575757575758,
+        "recall": 0.95,
+        "f1-score": 0.7169811320754716,
+        "support": 20.0
+      },
+      "accuracy": 0.6590909090909091,
+      "macro avg": {
+        "precision": 0.7424242424242424,
+        "recall": 0.6833333333333333,
+        "f1-score": 0.6442048517520216,
+        "support": 44.0
+      },
+      "weighted avg": {
+        "precision": 0.7575757575757575,
+        "recall": 0.6590909090909091,
+        "f1-score": 0.6375888262680715,
+        "support": 44.0
+      }
+    }
+  },
+  "history": [
+    {
+      "model": "multimodal_fusion",
+      "epoch": 1,
+      "train_loss": 0.70516,
+      "train_f1": 0.6197,
+      "valid_loss": 0.59638,
+      "valid_f1": 0.76
+    },
+    {
+      "model": "multimodal_fusion",
+      "epoch": 2,
+      "train_loss": 0.47788,
+      "train_f1": 0.7684,
+      "valid_loss": 0.65134,
+      "valid_f1": 0.7547
+    },
+    {
+      "model": "multimodal_fusion",
+      "epoch": 3,
+      "train_loss": 0.33691,
+      "train_f1": 0.8912,
+      "valid_loss": 0.68407,
+      "valid_f1": 0.8163
+    }
+  ]
+}

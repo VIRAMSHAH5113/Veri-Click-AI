@@ -1,0 +1,53 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+data/history.sqlite3
+artifacts/*.pt
+artifacts/vocab.json
+artifacts/model_config.json
+artifacts/test_metrics.json
+artifacts/training_history.csv
+outputs/*
+!outputs/.gitkeep
+# Local dataset and downloaded thumbnail pilot
+/data/Final_data.csv
+/data/downloaded_thumbnails/
+/data/Thumbnail/
+# Generated model comparison artifacts
+/artifacts/model_comparison_metrics.json
+/artifacts/model_comparison.csv
+/artifacts/model_comparison_history.csv
+/artifacts/comparison_models/
+
+# Local secrets, never commit API credentials
+.env
+# Exclude unnecessary frontend dependencies
+node_modules/
+dist/
+build/
+
+# Protect environment secrets
+.env.*
+!.env.example
+
+# Exclude local databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Include compact trained DL model checkpoints
+!artifacts/*.pt
+!artifacts/vocab.json
+!artifacts/model_config.json
+!artifacts/test_metrics.json
+
+# Include model comparison results
+!artifacts/model_comparison_metrics.json
+!artifacts/model_comparison.csv
+!artifacts/model_comparison_history.csv
+
+# Keep processed training data local
+/artifacts/prepared_dataset_used.csv

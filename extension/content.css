@@ -1,0 +1,26 @@
+.vericlick-position-context { position: relative !important; }
+#vericlick-scan-button {
+  position: fixed !important; right: 22px !important; bottom: 22px !important; z-index: 2147483646 !important;
+  display: inline-flex !important; align-items: center !important; gap: 10px !important;
+  border: 1px solid rgba(197,185,255,.65) !important; border-radius: 12px !important;
+  padding: 12px 15px !important; background: linear-gradient(135deg,#9c88ff,#7460e9) !important;
+  color: #fff !important; font: 600 12px/1.2 Arial,sans-serif !important; cursor: pointer !important;
+  box-shadow: 0 12px 34px rgba(23,18,65,.4) !important; transition: transform .16s, filter .16s !important;
+}
+#vericlick-scan-button:hover { transform: translateY(-2px) !important; filter: brightness(1.07) !important; }
+#vericlick-scan-button:disabled { opacity: .88 !important; cursor: progress !important; }
+.vericlick-scan-glyph { font-size: 15px !important; }
+.vericlick-scan-arrow { font-size: 15px !important; opacity: .9 !important; }
+.vericlick-risk-badge {
+  position: absolute !important; top: 8px !important; right: 8px !important; z-index: 2147483645 !important;
+  max-width: calc(100% - 16px) !important; overflow: hidden !important; text-overflow: ellipsis !important; white-space: nowrap !important;
+  padding: 6px 8px !important; border-radius: 6px !important; font: 700 9px/1 Arial,sans-serif !important;
+  letter-spacing: .35px !important; backdrop-filter: blur(10px) !important; box-shadow: 0 4px 14px rgba(0,0,0,.22) !important;
+  pointer-events: auto !important;
+}
+.vericlick-high { background: rgba(47,13,29,.93) !important; color: #ff9bb5 !important; border: 1px solid rgba(255,127,156,.58) !important; }
+.vericlick-review { background: rgba(48,33,14,.94) !important; color: #ffd08a !important; border: 1px solid rgba(247,191,105,.55) !important; }
+.vericlick-low { background: rgba(10,39,35,.93) !important; color: #8af0ce !important; border: 1px solid rgba(105,227,188,.55) !important; }
+.vericlick-busy .vericlick-scan-glyph { animation: vericlick-spin 1.4s linear infinite !important; }
+.vericlick-progress { width: 13px !important; height: 13px !important; border-radius: 50% !important; border: 2px solid #fff5 !important; border-top-color: white !important; animation: vericlick-spin .8s linear infinite !important; }
+@keyframes vericlick-spin { to { transform: rotate(360deg); } }

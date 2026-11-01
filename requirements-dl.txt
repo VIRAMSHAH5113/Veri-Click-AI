@@ -1,0 +1,3 @@
+-r requirements.txt
+# CPU builds are sufficient; choose a CUDA build manually only if your GPU and drivers support it.
+torch>=2.2,<3.0

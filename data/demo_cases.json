@@ -1,0 +1,20 @@
+[
+  {
+    "short_name": "Sensational title",
+    "title": "STOP! You will not believe this unbelievable secret",
+    "image": "/static/samples/clickbait.jpg",
+    "purpose": "Illustrative high-signal title for a UI demonstration; not a labeled benchmark sample."
+  },
+  {
+    "short_name": "Tutorial title",
+    "title": "How to replace a light switch safely: a step-by-step guide",
+    "image": "/static/samples/tutorial.jpg",
+    "purpose": "Illustrative informative-style title for a UI demonstration; not a labeled benchmark sample."
+  },
+  {
+    "short_name": "Curiosity-led title",
+    "title": "The truth about this viral trend is finally revealed!",
+    "image": "/static/samples/curiosity.jpg",
+    "purpose": "Illustrative curiosity-led title for a UI demonstration; not a labeled benchmark sample."
+  }
+]

@@ -1,0 +1,235 @@
+{
+  "status": "completed",
+  "dataset_file": "Final_data.csv",
+  "input_rows": 21238,
+  "valid_rows": 292,
+  "class_counts": {
+    "0": 158,
+    "1": 134
+  },
+  "split": {
+    "train": 204,
+    "validation": 44,
+    "test": 44,
+    "seed": 42
+  },
+  "device": "cpu",
+  "epochs_requested": 3,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "patience": 2,
+  "max_samples_argument": 300,
+  "elapsed_seconds": 422.8,
+  "primary_model": "multimodal_fusion",
+  "models": [
+    {
+      "key": "bigru_text",
+      "name": "BiGRU text-only",
+      "status": "trained",
+      "best_epoch": 3,
+      "training_seconds": 107.2,
+      "validation_f1_at_best_epoch": 0.8205,
+      "test_metrics": {
+        "accuracy": 0.75,
+        "precision": 0.7143,
+        "recall": 0.75,
+        "f1": 0.7317,
+        "roc_auc": 0.8187,
+        "confusion_matrix": [
+          [
+            18,
+            6
+          ],
+          [
+            5,
+            15
+          ]
+        ],
+        "classification_report": {
+          "non_clickbait": {
+            "precision": 0.782608695652174,
+            "recall": 0.75,
+            "f1-score": 0.7659574468085106,
+            "support": 24.0
+          },
+          "clickbait": {
+            "precision": 0.7142857142857143,
+            "recall": 0.75,
+            "f1-score": 0.7317073170731707,
+            "support": 20.0
+          },
+          "accuracy": 0.75,
+          "macro avg": {
+            "precision": 0.7484472049689441,
+            "recall": 0.75,
+            "f1-score": 0.7488323819408407,
+            "support": 44.0
+          },
+          "weighted avg": {
+            "precision": 0.751552795031056,
+            "recall": 0.75,
+            "f1-score": 0.7503892060197198,
+            "support": 44.0
+          }
+        }
+      }
+    },
+    {
+      "key": "cnn_image",
+      "name": "CNN thumbnail-only",
+      "status": "trained",
+      "best_epoch": 3,
+      "training_seconds": 104.1,
+      "validation_f1_at_best_epoch": 0.619,
+      "test_metrics": {
+        "accuracy": 0.5909,
+        "precision": 0.5417,
+        "recall": 0.65,
+        "f1": 0.5909,
+        "roc_auc": 0.5625,
+        "confusion_matrix": [
+          [
+            13,
+            11
+          ],
+          [
+            7,
+            13
+          ]
+        ],
+        "classification_report": {
+          "non_clickbait": {
+            "precision": 0.65,
+            "recall": 0.5416666666666666,
+            "f1-score": 0.5909090909090909,
+            "support": 24.0
+          },
+          "clickbait": {
+            "precision": 0.5416666666666666,
+            "recall": 0.65,
+            "f1-score": 0.5909090909090909,
+            "support": 20.0
+          },
+          "accuracy": 0.5909090909090909,
+          "macro avg": {
+            "precision": 0.5958333333333333,
+            "recall": 0.5958333333333333,
+            "f1-score": 0.5909090909090909,
+            "support": 44.0
+          },
+          "weighted avg": {
+            "precision": 0.6007575757575757,
+            "recall": 0.5909090909090909,
+            "f1-score": 0.5909090909090909,
+            "support": 44.0
+          }
+        }
+      }
+    },
+    {
+      "key": "mlp_features",
+      "name": "MLP engineered features",
+      "status": "trained",
+      "best_epoch": 1,
+      "training_seconds": 96.0,
+      "validation_f1_at_best_epoch": 0.6957,
+      "test_metrics": {
+        "accuracy": 0.6136,
+        "precision": 0.5517,
+        "recall": 0.8,
+        "f1": 0.6531,
+        "roc_auc": 0.7146,
+        "confusion_matrix": [
+          [
+            11,
+            13
+          ],
+          [
+            4,
+            16
+          ]
+        ],
+        "classification_report": {
+          "non_clickbait": {
+            "precision": 0.7333333333333333,
+            "recall": 0.4583333333333333,
+            "f1-score": 0.5641025641025641,
+            "support": 24.0
+          },
+          "clickbait": {
+            "precision": 0.5517241379310345,
+            "recall": 0.8,
+            "f1-score": 0.6530612244897959,
+            "support": 20.0
+          },
+          "accuracy": 0.6136363636363636,
+          "macro avg": {
+            "precision": 0.6425287356321838,
+            "recall": 0.6291666666666667,
+            "f1-score": 0.60858189429618,
+            "support": 44.0
+          },
+          "weighted avg": {
+            "precision": 0.6507836990595611,
+            "recall": 0.6136363636363636,
+            "f1-score": 0.6045383188240331,
+            "support": 44.0
+          }
+        }
+      }
+    },
+    {
+      "key": "multimodal_fusion",
+      "name": "Multimodal gated fusion",
+      "status": "trained",
+      "best_epoch": 3,
+      "training_seconds": 104.7,
+      "validation_f1_at_best_epoch": 0.8163,
+      "test_metrics": {
+        "accuracy": 0.6591,
+        "precision": 0.5758,
+        "recall": 0.95,
+        "f1": 0.717,
+        "roc_auc": 0.8625,
+        "confusion_matrix": [
+          [
+            10,
+            14
+          ],
+          [
+            1,
+            19
+          ]
+        ],
+        "classification_report": {
+          "non_clickbait": {
+            "precision": 0.9090909090909091,
+            "recall": 0.4166666666666667,
+            "f1-score": 0.5714285714285714,
+            "support": 24.0
+          },
+          "clickbait": {
+            "precision": 0.5757575757575758,
+            "recall": 0.95,
+            "f1-score": 0.7169811320754716,
+            "support": 20.0
+          },
+          "accuracy": 0.6590909090909091,
+          "macro avg": {
+            "precision": 0.7424242424242424,
+            "recall": 0.6833333333333333,
+            "f1-score": 0.6442048517520216,
+            "support": 44.0
+          },
+          "weighted avg": {
+            "precision": 0.7575757575757575,
+            "recall": 0.6590909090909091,
+            "f1-score": 0.6375888262680715,
+            "support": 44.0
+          }
+        }
+      }
+    }
+  ],
+  "interpretation": "All models use the same stratified train/validation/test rows. Report held-out test metrics, not training metrics. Small pilot scores are noisy and do not reproduce the supplied paper."
+}

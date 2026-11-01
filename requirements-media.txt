@@ -1,0 +1,3 @@
+# Optional speech transcription stack for the Worth Watching media analyzer.
+# Uses CPU int8 and the tiny multilingual Whisper model by default.
+faster-whisper>=1.1,<2.0

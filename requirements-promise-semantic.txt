@@ -1,0 +1,4 @@
+# Optional enhancement: local sentence-transformer embeddings for ranking evidence windows.
+# This downloads model weights on first use and uses CPU/RAM; skip on low-memory machines.
+-r requirements-promise.txt
+sentence-transformers>=3.0,<5
